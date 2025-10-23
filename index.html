@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Productos</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>Formulario de Registro de Productos</h1>
+
+  <form id="productForm">
+    <label>Nombre: <input type="text" id="nombre" /></label><br>
+    <label>Cantidad: <input type="number" id="cantidad" /></label><br>
+    <label>Precio: <input type="number" step="0.01" id="precio" /></label><br>
+    <label>Impuesto (%): <input type="number" step="0.01" id="impuesto" /></label><br>
+    <button type="submit">Guardar Producto</button>
+  </form>
+
+  <p class="error" id="mensajeError"></p>
+
+  <h2>Productos Registrados</h2>
+  <div class="button-group">
+    <button onclick="mostrarProductos()">🔄 Actualizar</button>
+    <button onclick="descargarArchivo()" class="btn-download">📥 Descargar .txt</button>
+    <button onclick="limpiarTodos()" class="btn-danger">🗑️ Limpiar Todo</button>
+  </div>
+
+  <table id="tablaProductos">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        <th>Precio Base</th>
+        <th>Impuesto (%)</th>
+        <th>Precio Total</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</body>
+</html>
